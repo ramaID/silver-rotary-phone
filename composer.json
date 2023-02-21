@@ -4,12 +4,22 @@
     "description": "The Laravel Framework.",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "/Users/rama/Laravolt/laravolt",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
     "require": {
         "php": "^8.1",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.0",
         "laravel/sanctum": "^3.2",
-        "laravel/tinker": "^2.8"
+        "laravel/tinker": "^2.8",
+        "laravolt/laravolt": "dev-main"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -45,6 +55,9 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "test": [
+            "XDEBUG_MODE=coverage php artisan test --coverage --profile"
         ]
     },
     "extra": {
